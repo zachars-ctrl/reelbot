@@ -12,5 +12,13 @@
   "icone": "build",
   "couleur": "orange",
   "description": ""
+ },
+ {
+  "id": "cinema",
+  "nom": "Cinéma",
+  "icone": "movie",
+  "couleur": "green",
+  "description": "Films, séries, documentaires et recommandations cinématographiques",
+  "cree_le": "2026-09-29"
  }
 ]
