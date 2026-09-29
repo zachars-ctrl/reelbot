@@ -73,5 +73,19 @@
   "verdict": "Documentaire essentiel à ne pas rater.",
   "resume": "Présentation du film documentaire 'Naza' sur l'armée israélienne et Gaza, primé à Venise. Il sort en salles les 12 et 13 octobre avant d'être diffusé gratuitement sur le site du Guardian.",
   "a_retenir": "Documentaire Naza : en salle les 12-13 octobre puis gratuit sur The Guardian"
+ },
+ {
+  "id": "605821689c",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DdwAeh5MYVf/?stkn=OW9kOWgxOWxiMjJw",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Meilleures alternatives à Google Search",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 4,
+  "verdict": "Indispensable pour protéger sa vie privée.",
+  "resume": "La vidéo propose des alternatives respectueuses de la vie privée à Google Search, comme Qwant, DuckDuckGo et surtout le métamoteur open source SearXNG.",
+  "a_retenir": "SearXNG"
  }
 ]
