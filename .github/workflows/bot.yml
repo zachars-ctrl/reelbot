@@ -1,30 +1,40 @@
 name: reelbot
 on:
   schedule:
-    - cron: "0 6,11,17 * * *"   # 3 fois/jour : ~8h, 13h, 19h (heure de Paris, UTC+2 en été)
-  workflow_dispatch:       # bouton "Run workflow" pour lancer à la main
+    - cron: "0 6,11,17 * * *"   # tri automatique 3 fois/jour (~8h, 13h, 19h heure de Paris en été)
+    - cron: "*/10 * * * *"      # coup d'œil toutes les 10 min : lance le tri seulement si tu as envoyé /go
+  workflow_dispatch:            # bouton "Run workflow" pour lancer à la main
 permissions:
   contents: write
 concurrency: reelbot
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
-      - name: Des messages en attente ?
+      - name: Faut-il trier ?
         id: check
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
         run: |
-          n=$(curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/getUpdates?timeout=0" | python3 -c "import sys,json;print(len(json.load(sys.stdin).get('result',[])))")
-          echo "Messages : $n"
-          echo "n=$n" >> "$GITHUB_OUTPUT"
+          curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/getUpdates?timeout=0" > "$RUNNER_TEMP/u.json"
+          n=$(python3 -c "import json,os;print(len(json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[])))")
+          go=$(python3 -c "import json,os;r=json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[]);print(sum(1 for u in r if (u.get('message',{}).get('text') or '').strip().lower().startswith('/go')))")
+          run=no
+          if [ "$n" != "0" ]; then
+            if [ "$EVENT" = "workflow_dispatch" ] || [ "$go" != "0" ] || [ "$CRON" = "0 6,11,17 * * *" ]; then run=yes; fi
+          fi
+          echo "Messages : $n / demandes /go : $go / on trie : $run"
+          echo "run=$run" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
-        if: steps.check.outputs.n != '0'
+        if: steps.check.outputs.run == 'yes'
       - uses: actions/setup-python@v5
-        if: steps.check.outputs.n != '0'
+        if: steps.check.outputs.run == 'yes'
         with:
           python-version: "3.12"
       - name: Analyse
-        if: steps.check.outputs.n != '0'
+        if: steps.check.outputs.run == 'yes'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -36,7 +46,7 @@ jobs:
           python bot.py
           rm -f cookies.txt
       - name: Sauvegarde du tableau
-        if: steps.check.outputs.n != '0'
+        if: steps.check.outputs.run == 'yes'
         run: |
           git config user.name reelbot
           git config user.email reelbot@users.noreply.github.com
