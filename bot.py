@@ -95,6 +95,22 @@ def analyse(url, on_wait=lambda txt: None):
         raise RuntimeError(f"Gemini : {m[:200]}")
 
 
+def git_save(msg):
+    """Enregistre reels.json + etat.json sur GitHub tout de suite (la page se met à jour sans attendre la fin)."""
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return
+    g = ["git", "-c", "user.name=reelbot", "-c", "user.email=reelbot@users.noreply.github.com"]
+    subprocess.run(g + ["add", DATA, STATE], capture_output=True)
+    if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
+        return
+    subprocess.run(g + ["commit", "-q", "-m", msg], capture_output=True)
+    for _ in range(3):
+        subprocess.run(g + ["pull", "-q", "--rebase"], capture_output=True)
+        if subprocess.run(["git", "push", "-q"], capture_output=True).returncode == 0:
+            return
+        time.sleep(3)
+
+
 STATE = "etat.json"  # garde l'id du dernier message de statut, pour l'effacer au tri suivant
 
 
@@ -192,6 +208,9 @@ def main():
         status(f"⏳ Tri en cours : {n}/{len(todo)}\n✅ {len(ok)} classé(s)   ⚠️ {len(ko)} échec(s)\n"
                f"Dernier : {item['titre']}")
         json.dump(reels, open(DATA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        state["chat"] = chat
+        json.dump(state, open(STATE, "w"))
+        git_save(f"réel {n}/{len(todo)} : {item['titre'][:50]}")
         time.sleep(5)  # petite pause entre deux réels pour ne pas saturer Gemini
 
     # 4) Bilan final
@@ -218,7 +237,7 @@ def main():
     json.dump(reels, open(DATA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     state["chat"] = chat
     json.dump(state, open(STATE, "w"))
-    subprocess.run(["git", "add", STATE, DATA], capture_output=True)  # pour que GitHub les sauvegarde
+    git_save("tri terminé")
 
 
 if __name__ == "__main__":
