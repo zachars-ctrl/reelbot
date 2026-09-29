@@ -91,6 +91,9 @@ def analyse(url):
         raise RuntimeError(f"Gemini : {m[:200]}")
 
 
+STATE = "etat.json"  # garde l'id du dernier message de statut, pour l'effacer au tri suivant
+
+
 def main():
     # Bouton "📂 Réels" en bas de la conversation, qui ouvre la page
     if owner and repo:
@@ -98,45 +101,107 @@ def main():
 
     updates = tg("getUpdates", timeout=0).get("result", [])
     reels = json.load(open(DATA, encoding="utf-8")) if os.path.exists(DATA) else []
+    state = json.load(open(STATE)) if os.path.exists(STATE) else {}
+    known = {r["lien"] for r in reels}
 
-    def process(item):
+    # 1) On fait la liste de ce qu'il y a à faire
+    chat = int(ALLOWED) if ALLOWED else state.get("chat")
+    todo_new, to_delete = [], []
+    for u in updates:
+        msg = u.get("message") or {}
+        c = msg.get("chat", {}).get("id")
+        if not c or (ALLOWED and str(c) != ALLOWED):
+            continue
+        chat = c
+        to_delete.append((c, msg.get("message_id")))
+        text = (msg.get("text") or "") + " " + (msg.get("caption") or "")
+        for url in URL_RE.findall(text):
+            if url not in known:
+                known.add(url)
+                todo_new.append({"date": datetime.date.today().isoformat(), "lien": url})
+    todo_retry = [r for r in reels if r.get("categorie") == "Échec" and r.get("essais", 1) < MAX_TRIES]
+    todo = todo_retry + todo_new
+
+    # 2) On nettoie la conversation : messages envoyés + ancien statut
+    for c, mid in to_delete:
+        tg("deleteMessage", chat_id=c, message_id=mid)
+    if chat and state.get("status_id"):
+        tg("deleteMessage", chat_id=chat, message_id=state["status_id"])
+    if updates:
+        tg("getUpdates", offset=updates[-1]["update_id"] + 1, timeout=0)  # marque comme traités
+
+    if not chat:
+        print("Aucune conversation connue.")
+        return
+    button = {"inline_keyboard": [[{"text": "📂 Ouvrir mes réels", "web_app": {"url": PAGE_URL}}]]} if owner else None
+
+    def status(text):
+        params = dict(chat_id=chat, text=text, disable_web_page_preview=True)
+        if button:
+            params["reply_markup"] = button
+        if state.get("status_id"):
+            r = tg("editMessageText", message_id=state["status_id"], **params)
+            if r.get("ok") or "not modified" in str(r.get("description", "")):
+                return
+        r = tg("sendMessage", **params)
+        if r.get("ok"):
+            state["status_id"] = r["result"]["message_id"]
+
+    state["status_id"] = None
+    if not todo:
+        status("✅ Rien à trier : aucun nouveau réel et aucun échec à retenter.\n"
+               f"📊 {len([r for r in reels if r.get('categorie') != 'Échec'])} réels classés au total.")
+    else:
+        status(f"⏳ Tri en cours : {len(todo)} réel(s)\n"
+               f"• {len(todo_new)} nouveau(x)\n• {len(todo_retry)} échec(s) à retenter")
+
+    # 3) On analyse, en affichant l'avancement
+    ok, ko = [], []
+    for n, item in enumerate(todo, 1):
         try:
             d = analyse(item["lien"])
             for k in ["titre", "categorie", "note", "resume", "a_retenir"]:
                 item[k] = d.get(k, "")
             item.pop("essais", None)
+            ok.append(item)
             print("OK", item["lien"], item["titre"])
         except Exception as e:
             item.update(titre="Pas réussi à analyser", categorie="Échec", note=0, a_retenir="",
                         resume=str(e)[:250], essais=item.get("essais", 0) + 1)
+            ko.append(item)
             print("ECHEC", item["lien"], e)
+        if item in todo_new:
+            reels.append(item)
+        status(f"⏳ Tri en cours : {n}/{len(todo)}\n✅ {len(ok)} classé(s)   ⚠️ {len(ko)} échec(s)\n"
+               f"Dernier : {item['titre']}")
+        json.dump(reels, open(DATA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         time.sleep(5)  # petite pause entre deux réels pour ne pas saturer Gemini
 
-    # 1) on retente les échecs précédents
-    for item in reels:
-        if item.get("categorie") == "Échec" and item.get("essais", 1) < MAX_TRIES:
-            process(item)
-    known = {r["lien"] for r in reels}
-
-    # 2) les nouveaux réels envoyés sur Telegram
-    for u in updates:
-        msg = u.get("message") or {}
-        chat, mid = msg.get("chat", {}).get("id"), msg.get("message_id")
-        if not chat or (ALLOWED and str(chat) != ALLOWED):
-            continue
-        text = (msg.get("text") or "") + " " + (msg.get("caption") or "")
-        for url in URL_RE.findall(text):
-            if url in known:
-                continue
-            item = {"date": datetime.date.today().isoformat(), "lien": url}
-            process(item)
-            reels.append(item)
-            known.add(url)
-        tg("deleteMessage", chat_id=chat, message_id=mid)  # garde la conversation propre
+    # 4) Bilan final
+    if todo:
+        lines = [f"✅ Tri terminé : {len(ok)}/{len(todo)} réel(s) classé(s)"]
+        par_cat = {}
+        for r in ok:
+            par_cat[r["categorie"]] = par_cat.get(r["categorie"], 0) + 1
+        for cat, nb in sorted(par_cat.items(), key=lambda x: -x[1]):
+            lines.append(f"   • {cat} : {nb}")
+        top = sorted(ok, key=lambda r: -(r.get("note") or 0))[:3]
+        if top:
+            lines.append("\n🏆 Les meilleurs :")
+            lines += [f"   {'⭐' * int(r.get('note') or 0)} {r['titre']}" for r in top]
+        if ko:
+            lines.append(f"\n⚠️ {len(ko)} échec(s) :")
+            for r in ko:
+                again = "retenté au prochain tri" if r["essais"] < MAX_TRIES else "abandonné"
+                lines.append(f"   • {r['resume'][:90]} ({again})")
+        total = len([r for r in reels if r.get("categorie") != "Échec"])
+        lines.append(f"\n📊 {total} réels classés au total")
+        status("\n".join(lines))
 
     json.dump(reels, open(DATA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    if updates:
-        tg("getUpdates", offset=updates[-1]["update_id"] + 1, timeout=0)  # marque comme traités
+    state["chat"] = chat
+    json.dump(state, open(STATE, "w"))
+    subprocess.run(["git", "add", STATE, DATA], capture_output=True)  # pour que GitHub les sauvegarde
 
 
 if __name__ == "__main__":
