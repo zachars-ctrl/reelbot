@@ -52,7 +52,7 @@ def download(url, tmp):
     return vids[0], desc
 
 
-def analyse(url):
+def analyse(url, on_wait=lambda txt: None):
     is_yt = "youtube.com" in url or "youtu.be" in url
     with tempfile.TemporaryDirectory() as tmp:
         if is_yt:  # Gemini lit YouTube directement
@@ -81,8 +81,12 @@ def analyse(url):
                     last_err = e
                     msg = str(e)
                     print(f"  {model} essai {attempt + 1} : {msg[:150]}")
-                    if any(k in msg for k in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500")):
-                        time.sleep(30 * (attempt + 1))  # trop de demandes d'un coup : on patiente
+                    if "PerDay" in msg or "per day" in msg.lower():
+                        break  # quota du jour épuisé pour ce modèle : inutile d'attendre
+                    if any(k in msg for k in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500")) and attempt < 2:
+                        wait = 30 * (attempt + 1)
+                        on_wait(f"Gemini ({model}) saturé, nouvel essai dans {wait} s…")
+                        time.sleep(wait)  # trop de demandes d'un coup : on patiente
                         continue
                     break  # modèle indisponible : on passe au suivant
         m = str(last_err)
@@ -157,9 +161,22 @@ def main():
 
     # 3) On analyse, en affichant l'avancement
     ok, ko = [], []
+    start = time.time()
     for n, item in enumerate(todo, 1):
+        if time.time() - start > 20 * 60:  # sécurité : GitHub coupe à 30 min
+            for rest in todo[n - 1:]:
+                if rest in todo_new:
+                    rest.update(titre="En attente", categorie="Échec", note=0, a_retenir="", essais=0,
+                                resume="Pas eu le temps, repris au prochain tri.")
+                    reels.append(rest)
+            status(f"⏸️ Tri arrêté après 20 min : {len(ok)} classé(s), {len(todo) - n + 1} repris au prochain tri.")
+            todo = todo[:n - 1]
+            break
+        status(f"⏳ Tri en cours : réel {n}/{len(todo)}\n✅ {len(ok)} classé(s)   ⚠️ {len(ko)} échec(s)\n"
+               "🔎 Analyse en cours…")
         try:
-            d = analyse(item["lien"])
+            d = analyse(item["lien"], on_wait=lambda txt, n=n: status(
+                f"⏳ Tri en cours : réel {n}/{len(todo)}\n✅ {len(ok)} classé(s)   ⚠️ {len(ko)} échec(s)\n⌛ {txt}"))
             for k in ["titre", "categorie", "note", "resume", "a_retenir"]:
                 item[k] = d.get(k, "")
             item.pop("essais", None)
