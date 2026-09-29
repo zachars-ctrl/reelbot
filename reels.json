@@ -6,7 +6,10 @@
   "categorie": "Tuto IA",
   "note": 5,
   "resume": "Une méthode en 4 prompts sur Claude pour faire auditer son CV par une simulation de recruteur et réécrire ses expériences avec la formule XYZ.",
-  "a_retenir": "Réécrire ses expériences avec la formule XYZ de Google via Claude"
+  "a_retenir": "Réécrire ses expériences avec la formule XYZ de Google via Claude",
+  "id": "0f5ecb2449",
+  "source": "Instagram",
+  "cat": "tuto-ia"
  },
  {
   "date": "2026-09-29",
@@ -15,7 +18,10 @@
   "categorie": "Tuto IA",
   "note": 5,
   "resume": "Ce tuto montre comment exporter et transcrire automatiquement ses réels Instagram pour créer une base de données de connaissances interrogeable avec un LLM.",
-  "a_retenir": "GitHub : sosoj92/reels-vault (yt-dlp, transcription audio et indexation avec Claude)"
+  "a_retenir": "GitHub : sosoj92/reels-vault (yt-dlp, transcription audio et indexation avec Claude)",
+  "id": "e117768ac6",
+  "source": "Instagram",
+  "cat": "tuto-ia"
  },
  {
   "date": "2026-09-29",
@@ -24,7 +30,10 @@
   "categorie": "Outil IA",
   "note": 4,
   "resume": "Bilawal Sidhu présente le succès de son projet open-source 'God's Eye View', numéro 1 sur GitHub. Il propose un guide pour l'utiliser sans coder et explorer le globe en temps réel.",
-  "a_retenir": "God's Eye View (disponible sur GitHub)"
+  "a_retenir": "God's Eye View (disponible sur GitHub)",
+  "id": "c7c794a3d7",
+  "source": "Instagram",
+  "cat": "outil-ia"
  },
  {
   "date": "2026-09-29",
@@ -33,7 +42,10 @@
   "categorie": "Autre",
   "note": 4,
   "resume": "Cette vidéo vulgarise le fonctionnement de la compression PNG sans perte face au JPEG. Elle explique comment l'encodage par différences de pixels et l'arbre de Huffman permettent de réduire drastiquement la taille du fichier.",
-  "a_retenir": "L'arbre de Huffman : attribuer des codes plus courts aux motifs les plus fréquents pour compresser sans perte."
+  "a_retenir": "L'arbre de Huffman : attribuer des codes plus courts aux motifs les plus fréquents pour compresser sans perte.",
+  "id": "6337d0208e",
+  "source": "Instagram",
+  "cat": "autre"
  },
  {
   "date": "2026-09-29",
@@ -41,8 +53,11 @@
   "titre": "Pas réussi à analyser",
   "categorie": "Échec",
   "note": 0,
-  "resume": "téléchargement impossible : ERROR: [Instagram] DdWCUMDgQqP: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the la",
+  "resume": "Instagram demande une connexion (cookies).",
   "a_retenir": "",
-  "essais": 1
+  "essais": 2,
+  "id": "40ff2a4921",
+  "source": "Instagram",
+  "verdict": ""
  }
 ]

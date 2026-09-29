@@ -1,0 +1,16 @@
+[
+ {
+  "id": "tuto-ia",
+  "nom": "Tuto IA",
+  "icone": "school",
+  "couleur": "blue",
+  "description": ""
+ },
+ {
+  "id": "outil-ia",
+  "nom": "Outil IA",
+  "icone": "build",
+  "couleur": "orange",
+  "description": ""
+ }
+]
