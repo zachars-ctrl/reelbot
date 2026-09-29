@@ -87,5 +87,19 @@
   "verdict": "Indispensable pour protéger sa vie privée.",
   "resume": "La vidéo propose des alternatives respectueuses de la vie privée à Google Search, comme Qwant, DuckDuckGo et surtout le métamoteur open source SearXNG.",
   "a_retenir": "SearXNG"
+ },
+ {
+  "id": "7d649f546f",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/Ddv34PgtY-v/?stkn=azdzMWR5Y2RwajVh",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "12 prompts pour schématiser avec l'IA",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 4,
+  "verdict": "Super pratique pour vulgariser et réviser visuellement.",
+  "resume": "Une sélection de 12 termes de prompts (canvas, diagram, blueprint, roadmap...) pour forcer l'IA à expliquer des concepts sous forme de visuels et schémas clairs.",
+  "a_retenir": "Mots-clés de visualisation : /canvas, /roadmap, /diagram, /blueprint"
  }
 ]
