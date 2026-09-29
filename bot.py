@@ -7,7 +7,8 @@ from google.genai import types
 
 TG = f"https://api.telegram.org/bot{os.environ['TELEGRAM_TOKEN']}"
 ALLOWED = os.environ.get("ALLOWED_CHAT_ID", "").strip()
-MODELS = [m for m in [os.environ.get("GEMINI_MODEL", "").strip(), "gemini-3.8-flash", "gemini-2.5-flash"] if m]
+MODELS = [m for m in [os.environ.get("GEMINI_MODEL", "").strip(), "gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.1-flash-lite"] if m]
+MAX_TRIES = 3  # un réel en échec est retenté aux tris suivants, 3 fois maximum
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 URL_RE = re.compile(r"https?://\S+")
 DATA = "reels.json"
@@ -65,19 +66,29 @@ def analyse(url):
             parts = [f]
         last_err = None
         for model in MODELS:
-            try:
-                resp = client.models.generate_content(
-                    model=model,
-                    contents=parts + [PROMPT.format(desc=desc or "(aucune)", cats=", ".join(CATEGORIES))],
-                    config=types.GenerateContentConfig(response_mime_type="application/json"))
-                d = json.loads(resp.text)
-                d = d[0] if isinstance(d, list) else d
-                if d.get("categorie") not in CATEGORIES:
-                    d["categorie"] = "Autre"
-                return d
-            except Exception as e:
-                last_err = e
-        raise RuntimeError(f"Gemini : {last_err}")
+            for attempt in range(3):
+                try:
+                    resp = client.models.generate_content(
+                        model=model,
+                        contents=parts + [PROMPT.format(desc=desc or "(aucune)", cats=", ".join(CATEGORIES))],
+                        config=types.GenerateContentConfig(response_mime_type="application/json"))
+                    d = json.loads(resp.text)
+                    d = d[0] if isinstance(d, list) else d
+                    if d.get("categorie") not in CATEGORIES:
+                        d["categorie"] = "Autre"
+                    return d
+                except Exception as e:
+                    last_err = e
+                    msg = str(e)
+                    print(f"  {model} essai {attempt + 1} : {msg[:150]}")
+                    if any(k in msg for k in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500")):
+                        time.sleep(30 * (attempt + 1))  # trop de demandes d'un coup : on patiente
+                        continue
+                    break  # modèle indisponible : on passe au suivant
+        m = str(last_err)
+        if "429" in m or "RESOURCE_EXHAUSTED" in m:
+            raise RuntimeError("Quota Gemini atteint, nouvel essai au prochain tri.")
+        raise RuntimeError(f"Gemini : {m[:200]}")
 
 
 def main():
@@ -90,8 +101,27 @@ def main():
         print("Rien de nouveau.")
         return
     reels = json.load(open(DATA, encoding="utf-8")) if os.path.exists(DATA) else []
+
+    def process(item):
+        try:
+            d = analyse(item["lien"])
+            for k in ["titre", "categorie", "note", "resume", "a_retenir"]:
+                item[k] = d.get(k, "")
+            item.pop("essais", None)
+            print("OK", item["lien"], item["titre"])
+        except Exception as e:
+            item.update(titre="Pas réussi à analyser", categorie="Échec", note=0, a_retenir="",
+                        resume=str(e)[:250], essais=item.get("essais", 0) + 1)
+            print("ECHEC", item["lien"], e)
+        time.sleep(5)  # petite pause entre deux réels pour ne pas saturer Gemini
+
+    # 1) on retente les échecs précédents
+    for item in reels:
+        if item.get("categorie") == "Échec" and item.get("essais", 1) < MAX_TRIES:
+            process(item)
     known = {r["lien"] for r in reels}
 
+    # 2) les nouveaux réels envoyés sur Telegram
     for u in updates:
         msg = u.get("message") or {}
         chat, mid = msg.get("chat", {}).get("id"), msg.get("message_id")
@@ -102,13 +132,7 @@ def main():
             if url in known:
                 continue
             item = {"date": datetime.date.today().isoformat(), "lien": url}
-            try:
-                d = analyse(url)
-                item.update({k: d.get(k, "") for k in ["titre", "categorie", "note", "resume", "a_retenir"]})
-                print("OK", url, item["titre"])
-            except Exception as e:
-                item.update(titre="Pas réussi à analyser", categorie="Échec", note=0, resume=str(e)[:300], a_retenir="")
-                print("ECHEC", url, e)
+            process(item)
             reels.append(item)
             known.add(url)
         tg("deleteMessage", chat_id=chat, message_id=mid)  # garde la conversation propre
