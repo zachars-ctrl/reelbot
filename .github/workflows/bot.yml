@@ -20,11 +20,10 @@ jobs:
         run: |
           curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/getUpdates?timeout=0" > "$RUNNER_TEMP/u.json"
           n=$(python3 -c "import json,os;print(len(json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[])))")
-          go=$(python3 -c "import json,os;r=json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[]);print(sum(1 for u in r if (u.get('message',{}).get('text') or '').strip().lower().startswith('/go')))")
+          go=$(python3 -c "import json,os;r=json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[]);print(sum(1 for u in r if (u.get('message',{}).get('text') or '').strip().lower().lstrip('/') in ('go','go!')))")
           run=no
-          if [ "$n" != "0" ]; then
-            if [ "$EVENT" = "workflow_dispatch" ] || [ "$go" != "0" ] || [ "$CRON" = "0 6,11,17 * * *" ]; then run=yes; fi
-          fi
+          if [ "$EVENT" = "workflow_dispatch" ] || [ "$go" != "0" ]; then run=yes; fi
+          if [ "$CRON" = "0 6,11,17 * * *" ] && [ "$n" != "0" ]; then run=yes; fi
           echo "Messages : $n / demandes /go : $go / on trie : $run"
           echo "run=$run" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
