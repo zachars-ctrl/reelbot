@@ -157,5 +157,19 @@
   "verdict": "L'idée est folle, à tester !",
   "resume": "Ce tutoriel montre comment faire collaborer Claude Fable 5 (en orchestrateur) et GPT 5.6 (en exécutant) au sein de Claude Code grâce à un plugin.",
   "a_retenir": "Plugin Codex pour lier Claude et GPT"
+ },
+ {
+  "id": "33562b5d05",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DWhXFRyCL72/?stkn=NGh4czNxcng3cWRj",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Sept outils Google utilisant l'IA",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 5,
+  "verdict": "Vraiment efficace, à tester de toute urgence.",
+  "resume": "Présentation de sept outils IA gratuits basés sur la technologie Google pour faciliter la création de sites, d'applications, de visuels et d'automatisations.",
+  "a_retenir": "Stitch, AI Studio Build, Opal, Notebook, Pomelli, Gemini Canva, Nano Banana 2"
  }
 ]
