@@ -40,5 +40,5 @@ jobs:
         run: |
           git config user.name reelbot
           git config user.email reelbot@users.noreply.github.com
-          git add reels.csv 2>/dev/null || true
+          git add reels.json 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "nouveaux réels" && git push)
