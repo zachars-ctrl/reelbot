@@ -97,9 +97,6 @@ def main():
         tg("setChatMenuButton", menu_button={"type": "web_app", "text": "📂 Réels", "web_app": {"url": PAGE_URL}})
 
     updates = tg("getUpdates", timeout=0).get("result", [])
-    if not updates:
-        print("Rien de nouveau.")
-        return
     reels = json.load(open(DATA, encoding="utf-8")) if os.path.exists(DATA) else []
 
     def process(item):
@@ -138,7 +135,8 @@ def main():
         tg("deleteMessage", chat_id=chat, message_id=mid)  # garde la conversation propre
 
     json.dump(reels, open(DATA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    tg("getUpdates", offset=updates[-1]["update_id"] + 1, timeout=0)  # marque comme traités
+    if updates:
+        tg("getUpdates", offset=updates[-1]["update_id"] + 1, timeout=0)  # marque comme traités
 
 
 if __name__ == "__main__":
