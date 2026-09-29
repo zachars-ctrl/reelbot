@@ -2,6 +2,65 @@ name: reelbot
 on:
   schedule:
     - cron: "0 6,11,17 * * *"   # tri automatique 3 fois/jour (~8h, 13h, 19h heure de Paris en été)
+    - cron: "*/10 * * * *"      # ancienne méthode "go" (sert tant que le relais Cloudflare n'est pas branché)
+  workflow_dispatch:            # lancé instantanément par le relais Cloudflare quand tu écris "go"
+    inputs:
+      status_id:
+        description: "message de statut Telegram à mettre à jour"
+        required: false
+      chat_id:
+        description: "conversation Telegram"
+        required: false
+      mode:
+        description: "tri ou reclasser"
+        required: false
+        default: "tri"
+permissions:
+  contents: write
+concurrency: reelbot
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Faut-il trier ?
+        id: check
+        env:
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          inbox=$(ls inbox/*.json 2>/dev/null | wc -l)
+          curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/getUpdates?timeout=0" > "$RUNNER_TEMP/u.json"
+          n=$(python3 -c "import json,os;print(len(json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[])))")
+          go=$(python3 -c "import json,os;r=json.load(open(os.environ['RUNNER_TEMP']+'/u.json')).get('result',[]);print(sum(1 for u in r if (u.get('message',{}).get('text') or '').strip().lower().lstrip('/') in ('go','go!')))")
+          run=no
+          if [ "$EVENT" = "workflow_dispatch" ] || [ "$go" != "0" ]; then run=yes; fi
+          if [ "$CRON" = "0 6,11,17 * * *" ] && [ "$((n + inbox))" != "0" ]; then run=yes; fi
+          echo "En attente : $inbox (relais) + $n (Telegram) / demandes go : $go / on trie : $run"
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.run == 'yes'
+        with:
+          python-version: "3.12"
+      - name: Analyse
+        if: steps.check.outputs.run == 'yes'
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ALLOWED_CHAT_ID: ${{ secrets.ALLOWED_CHAT_ID }}
+          COOKIES: ${{ secrets.INSTAGRAM_COOKIES }}
+          STATUS_ID: ${{ github.event.inputs.status_id }}
+          CHAT_ID: ${{ github.event.inputs.chat_id }}
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          pip install -q -U yt-dlp gallery-dl google-genai requests pillow
+          if [ -n "$COOKIES" ]; then printf '%s\n' "$COOKIES" > cookies.txt; fi
+          python bot.py
+          rm -f cookies.txtname: reelbot
+on:
+  schedule:
+    - cron: "0 6,11,17 * * *"   # tri automatique 3 fois/jour (~8h, 13h, 19h heure de Paris en été)
     - cron: "*/10 * * * *"      # coup d'œil toutes les 10 min : lance le tri seulement si tu as envoyé /go
   workflow_dispatch:            # bouton "Run workflow" pour lancer à la main
 permissions:
