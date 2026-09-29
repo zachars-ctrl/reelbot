@@ -115,5 +115,19 @@
   "verdict": "À voir si tu aimes l'étrange.",
   "resume": "Découverte des documentaires fascinants et dérangeants du réalisateur Lance Oppenheim, qui explorent des sujets hors normes comme les micros-sociétés de retraités ou les donneurs de sperme en ligne.",
   "a_retenir": "Lance Oppenheim"
+ },
+ {
+  "id": "4d45d79f4b",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/Ddmq5TuRezU/?stkn=djVrOWJzYml4b2Zh",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Schématiser son architecture de code avec Claude",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Grave utile pour piger ton code.",
+  "resume": "L'utilisation d'un outil lié à Claude Code permet d'analyser un projet de programmation complexe pour en dessiner automatiquement un schéma d'architecture clair et annoté.",
+  "a_retenir": "Le skill de schématisation de Claude Code"
  }
 ]
