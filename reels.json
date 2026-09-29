@@ -171,5 +171,19 @@
   "verdict": "Vraiment efficace, à tester de toute urgence.",
   "resume": "Présentation de sept outils IA gratuits basés sur la technologie Google pour faciliter la création de sites, d'applications, de visuels et d'automatisations.",
   "a_retenir": "Stitch, AI Studio Build, Opal, Notebook, Pomelli, Gemini Canva, Nano Banana 2"
+ },
+ {
+  "id": "2f16977345",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DdJlxFtMxXt/?stkn=bDAwdTNlejIyc2R0",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Créer des sites web avec Claude Code",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 5,
+  "verdict": "Indispensable pour booster son workflow dev.",
+  "resume": "Tutoriel pour configurer Claude Code avec des bibliothèques de design et des serveurs MCP afin de générer rapidement des interfaces professionnelles.",
+  "a_retenir": "UI UX Pro Max et serveur Magic MCP"
  }
 ]
