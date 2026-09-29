@@ -1,0 +1,47 @@
+[
+ {
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DdRyJYksemM/?stkn=ZDQ5aTBiaHNlOTEx",
+  "titre": "Optimiser son CV avec Claude en 4 prompts",
+  "categorie": "Tuto IA",
+  "note": 5,
+  "resume": "Une méthode en 4 prompts sur Claude pour faire auditer son CV par une simulation de recruteur et réécrire ses expériences avec la formule XYZ.",
+  "a_retenir": "Réécrire ses expériences avec la formule XYZ de Google via Claude"
+ },
+ {
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DbdnQBPNqHm/?stkn=MmQweXhudDlkbWQ5",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "resume": "Gemini : 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+  "a_retenir": ""
+ },
+ {
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DdEoYyrPTbF/?stkn=cGx2ZXBjc2t5ZWM4",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "resume": "Gemini : 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+  "a_retenir": ""
+ },
+ {
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DbyL3lNAbYf/?stkn=emp4cDNobmZ6NG5l",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "resume": "Gemini : 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+  "a_retenir": ""
+ },
+ {
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/p/DdWCcEEIJbk/?stkn=bHc4NG45ZzdxNGw2",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "resume": "téléchargement impossible : ERROR: [Instagram] DdWCUMDgQqP: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the la",
+  "a_retenir": ""
+ }
+]
