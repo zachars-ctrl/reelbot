@@ -129,5 +129,19 @@
   "verdict": "Grave utile pour piger ton code.",
   "resume": "L'utilisation d'un outil lié à Claude Code permet d'analyser un projet de programmation complexe pour en dessiner automatiquement un schéma d'architecture clair et annoté.",
   "a_retenir": "Le skill de schématisation de Claude Code"
+ },
+ {
+  "id": "97dd1e76d2",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DcUKWrVsbYu/?stkn=MTNnbzg0czU4bGQ5aw==",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Optimiser ses prompts Claude avec Prompt Master",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 5,
+  "verdict": "Grave utile pour économiser tes crédits.",
+  "resume": "Présentation de Prompt Master, un outil gratuit disponible sur GitHub pour optimiser automatiquement ses prompts sur Claude, ChatGPT et Cursor. Il permet d'éviter les erreurs dès le départ et réduit considérablement le nombre de messages nécessaires pour obtenir le bon résultat.",
+  "a_retenir": "L'outil Prompt Master sur GitHub, installable via la commande : npx skills add prompt-master"
  }
 ]
