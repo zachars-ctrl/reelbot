@@ -143,5 +143,19 @@
   "verdict": "Grave utile pour économiser tes crédits.",
   "resume": "Présentation de Prompt Master, un outil gratuit disponible sur GitHub pour optimiser automatiquement ses prompts sur Claude, ChatGPT et Cursor. Il permet d'éviter les erreurs dès le départ et réduit considérablement le nombre de messages nécessaires pour obtenir le bon résultat.",
   "a_retenir": "L'outil Prompt Master sur GitHub, installable via la commande : npx skills add prompt-master"
+ },
+ {
+  "id": "22f9d93d5a",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DavxC0GRusD/?stkn=ZzM1NTRkMGFqemJ2",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Combiner Claude et GPT dans Claude Code",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 4,
+  "verdict": "L'idée est folle, à tester !",
+  "resume": "Ce tutoriel montre comment faire collaborer Claude Fable 5 (en orchestrateur) et GPT 5.6 (en exécutant) au sein de Claude Code grâce à un plugin.",
+  "a_retenir": "Plugin Codex pour lier Claude et GPT"
  }
 ]
