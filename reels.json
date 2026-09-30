@@ -50,15 +50,16 @@
  {
   "date": "2026-09-29",
   "lien": "https://www.instagram.com/p/DdWCcEEIJbk/?stkn=bHc4NG45ZzdxNGw2",
-  "titre": "Pas réussi à analyser",
-  "categorie": "Échec",
-  "note": 0,
-  "resume": "Instagram demande une connexion (cookies).",
-  "a_retenir": "",
-  "essais": 2,
+  "titre": "Vérifier ses données fuitées avec l'OSINT",
+  "categorie": "Tech",
+  "note": 5,
+  "resume": "Ce guide explique comment utiliser un outil d'OSINT open source pour cartographier et visualiser toutes les fuites de données personnelles liées à votre adresse e-mail afin de mieux vous protéger.",
+  "a_retenir": "OpenCTI",
   "id": "40ff2a4921",
   "source": "Instagram",
-  "verdict": ""
+  "verdict": "Terrifiant mais super utile à faire.",
+  "miniature": "thumbs/40ff2a4921.jpg",
+  "cat": "tech"
  },
  {
   "id": "16115960a0",
