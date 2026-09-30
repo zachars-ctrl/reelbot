@@ -199,5 +199,19 @@
   "verdict": "Carrément utile pour les dev IA.",
   "resume": "Présentation de TasteSkill, un framework open-source gratuit qui injecte des règles de design aux agents IA pour éviter les rendus génériques. Il permet d'obtenir des sites web professionnels avec Claude, Gemini ou Cursor.",
   "a_retenir": "TasteSkill (framework open-source pour agents IA)"
+ },
+ {
+  "id": "8eefc78c53",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/Dc3S4n7sbcU/?stkn=MTJvbnQ2NnFqbGxqNQ==",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Creer des pubs IA avec Arcads",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 5,
+  "verdict": "Outil bluffant pour le marketing.",
+  "resume": "Ce contenu présente un outil capable de générer des publicités vidéo réalistes avec des acteurs virtuels sans besoin de tournage. Il permet de tester rapidement plusieurs variantes de scripts pour ses campagnes.",
+  "a_retenir": "Arcads.ai"
  }
 ]
