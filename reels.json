@@ -214,5 +214,20 @@
   "verdict": "Outil bluffant pour le marketing.",
   "resume": "Ce contenu présente un outil capable de générer des publicités vidéo réalistes avec des acteurs virtuels sans besoin de tournage. Il permet de tester rapidement plusieurs variantes de scripts pour ses campagnes.",
   "a_retenir": "Arcads.ai"
+ },
+ {
+  "id": "0abd20c583",
+  "date": "2026-09-30",
+  "lien": "https://www.instagram.com/reel/DaXa56PNV34/?stkn=MXRpZjlhbGc3dXNwcw==",
+  "source": "Instagram",
+  "miniature": "thumbs/0abd20c583.jpg",
+  "duree": 101,
+  "titre": "Cinq projets GitHub pour logiciels gratuits",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 5,
+  "verdict": "Des plans en or pour ton portefeuille.",
+  "resume": "Une sélection de cinq développeurs GitHub proposant des alternatives gratuites à des services payants comme Adobe, Office ou YouTube Premium.",
+  "a_retenir": "Rechercher sur GitHub : Yuliskov (YouTube TV), TheMythologist (Adobe), WitherOrNot (Office), GRQZ (téléchargement), StevieTV (streaming)."
  }
 ]
