@@ -11,6 +11,10 @@ on:
       chat_id:
         description: "conversation Telegram"
         required: false
+      mode:
+        description: "tri ou reclasser"
+        required: false
+        default: "tri"
 permissions:
   contents: write
 concurrency: reelbot
@@ -48,8 +52,9 @@ jobs:
           COOKIES: ${{ secrets.INSTAGRAM_COOKIES }}
           STATUS_ID: ${{ github.event.inputs.status_id }}
           CHAT_ID: ${{ github.event.inputs.chat_id }}
+          MODE: ${{ github.event.inputs.mode }}
         run: |
-          pip install -q -U yt-dlp gallery-dl google-genai requests
+          pip install -q -U yt-dlp gallery-dl google-genai requests pillow
           if [ -n "$COOKIES" ]; then printf '%s\n' "$COOKIES" > cookies.txt; fi
           python bot.py
           rm -f cookies.txt
