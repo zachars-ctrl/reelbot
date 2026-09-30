@@ -185,5 +185,19 @@
   "verdict": "Indispensable pour booster son workflow dev.",
   "resume": "Tutoriel pour configurer Claude Code avec des bibliothèques de design et des serveurs MCP afin de générer rapidement des interfaces professionnelles.",
   "a_retenir": "UI UX Pro Max et serveur Magic MCP"
+ },
+ {
+  "id": "5119c95220",
+  "date": "2026-09-29",
+  "lien": "https://www.instagram.com/reel/DXwfiA0oUQs/?stkn=YjF3czYxeHhmdmhy",
+  "source": "Instagram",
+  "miniature": "",
+  "titre": "Améliorer les designs de Claude avec TasteSkill",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Carrément utile pour les dev IA.",
+  "resume": "Présentation de TasteSkill, un framework open-source gratuit qui injecte des règles de design aux agents IA pour éviter les rendus génériques. Il permet d'obtenir des sites web professionnels avec Claude, Gemini ou Cursor.",
+  "a_retenir": "TasteSkill (framework open-source pour agents IA)"
  }
 ]
