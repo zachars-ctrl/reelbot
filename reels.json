@@ -229,5 +229,20 @@
   "verdict": "Des plans en or pour ton portefeuille.",
   "resume": "Une sélection de cinq développeurs GitHub proposant des alternatives gratuites à des services payants comme Adobe, Office ou YouTube Premium.",
   "a_retenir": "Rechercher sur GitHub : Yuliskov (YouTube TV), TheMythologist (Adobe), WitherOrNot (Office), GRQZ (téléchargement), StevieTV (streaming)."
+ },
+ {
+  "id": "8843704971",
+  "date": "2026-10-01",
+  "lien": "https://www.instagram.com/reel/Dd4Lg_ftTLm/?stkn=aWI1ZXpscW10OGIz",
+  "source": "Instagram",
+  "miniature": "thumbs/8843704971.jpg",
+  "duree": 39,
+  "titre": "Créer des animations défilement avec IA",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 5,
+  "verdict": "Technique bluffante pour un rendu pro.",
+  "resume": "Ce tuto montre comment créer des animations de produits avec défilement en utilisant Pollo AI pour générer des images et les animer.",
+  "a_retenir": "Pollo AI et Seendance 2.5"
  }
 ]
