@@ -244,5 +244,18 @@
   "verdict": "Technique bluffante pour un rendu pro.",
   "resume": "Ce tuto montre comment créer des animations de produits avec défilement en utilisant Pollo AI pour générer des images et les animer.",
   "a_retenir": "Pollo AI et Seendance 2.5"
+ },
+ {
+  "id": "9e4fd0b729",
+  "date": "2026-10-01",
+  "lien": "https://www.instagram.com/reel/Dd6nK53jUeh/?stkn=MXBuZGU0aTBnaHNvbQ==",
+  "source": "Instagram",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "a_retenir": "",
+  "verdict": "",
+  "resume": "téléchargement impossible : ERROR: [Instagram] Dd6nK53jUeh: Failed to parse JSON (caused by JSONDecodeError(\"Expecting value in '': line 1 column 1 (char 0)\")); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the",
+  "essais": 1
  }
 ]
