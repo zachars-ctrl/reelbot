@@ -271,5 +271,19 @@
   "verdict": "",
   "resume": "Gemini : Server disconnected without sending a response.",
   "essais": 1
+ },
+ {
+  "id": "9cb6638241",
+  "date": "2026-10-01",
+  "lien": "https://www.instagram.com/reel/DW_VHkCDKd_/?stkn=N3F1MGJ2NW45Ym55",
+  "source": "Instagram",
+  "miniature": "thumbs/9cb6638241.jpg",
+  "titre": "Générer des vidéos localement avec Wan2GP",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 5,
+  "verdict": "Une vraie pépite pour ton GPU.",
+  "resume": "Le projet open-source Wan2GP permet de générer gratuitement des vidéos par IA en local, de manière optimisée pour les cartes graphiques à partir de 6 Go de VRAM.",
+  "a_retenir": "Le dépôt GitHub deepbeepmeep/Wan2GP"
  }
 ]
