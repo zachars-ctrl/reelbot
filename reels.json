@@ -285,5 +285,19 @@
   "verdict": "Une vraie pépite pour ton GPU.",
   "resume": "Le projet open-source Wan2GP permet de générer gratuitement des vidéos par IA en local, de manière optimisée pour les cartes graphiques à partir de 6 Go de VRAM.",
   "a_retenir": "Le dépôt GitHub deepbeepmeep/Wan2GP"
+ },
+ {
+  "id": "ae63a32d14",
+  "date": "2026-10-02",
+  "lien": "https://www.instagram.com/reel/DchDNk9IMEE/?stkn=eTU3dGV0c25reG5p",
+  "source": "Instagram",
+  "miniature": "thumbs/ae63a32d14.jpg",
+  "titre": "Générer des vidéos avec MoneyPrinterTurbo",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Pratique pour automatiser du contenu facilement.",
+  "resume": "MoneyPrinterTurbo est un outil open source qui génère automatiquement des vidéos complètes (script, sous-titres, voix et montage) à partir d'un simple sujet.",
+  "a_retenir": "MoneyPrinterTurbo"
  }
 ]
