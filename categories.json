@@ -1,0 +1,12 @@
+{
+ "categories": [
+  {
+   "id": "video-re",
+   "nom": "Vidéo ré",
+   "icone": "folder",
+   "couleur": "blue",
+   "description": "Toutes les vidéos récentes par ordre Chronologique"
+  }
+ ],
+ "alias": {}
+}
