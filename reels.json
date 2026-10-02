@@ -299,5 +299,19 @@
   "verdict": "Pratique pour automatiser du contenu facilement.",
   "resume": "MoneyPrinterTurbo est un outil open source qui génère automatiquement des vidéos complètes (script, sous-titres, voix et montage) à partir d'un simple sujet.",
   "a_retenir": "MoneyPrinterTurbo"
+ },
+ {
+  "id": "a62a9c6785",
+  "date": "2026-10-02",
+  "lien": "https://www.instagram.com/reel/Dd9Q5Keuz94/?stkn=MXZjNWlnMHlwdGpzYw==",
+  "source": "Instagram",
+  "miniature": "thumbs/a62a9c6785.jpg",
+  "titre": "Simuler des clients avec MiroFish",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Super concept pour tester son offre.",
+  "resume": "MiroFish est un outil open source qui simule des milliers d'agents IA aux profils variés pour tester un lancement de produit, une pub ou un prix. Il permet d'anticiper les réactions du marché avant la sortie réelle.",
+  "a_retenir": "MiroFish (outil open source sur GitHub)"
  }
 ]
