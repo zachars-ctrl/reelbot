@@ -327,5 +327,19 @@
   "verdict": "Super astuce pour économiser des tokens.",
   "resume": "En reliant Claude à NotebookLM grâce à un skill dédié, Claude sauvegarde les points clés de chaque session et y accède par recherche sémantique sans saturer le contexte.",
   "a_retenir": "Connecter Claude à NotebookLM via un skill pour mémoriser les sessions à bas coût."
+ },
+ {
+  "id": "9d5da794ba",
+  "date": "2026-10-02",
+  "lien": "https://www.instagram.com/reel/Dd93BF4gK0L/?stkn=MTB4djFrdzgwa2cxOA==",
+  "source": "Instagram",
+  "miniature": "thumbs/9d5da794ba.jpg",
+  "titre": "Bot de trading crypto sur Solana",
+  "cat": "crypto",
+  "categorie": "Crypto",
+  "note": 2,
+  "verdict": "Du vent pour gratter des commentaires.",
+  "resume": "Une intervenante explique comment des bots détectent et copient les créateurs de tokens sur Solana pour revendre avant les rug pulls. L'auteur s'en sert surtout pour appeler à commenter sa vidéo.",
+  "a_retenir": "Sniping et copy-trading de tokens Solana"
  }
 ]

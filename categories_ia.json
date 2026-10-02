@@ -28,5 +28,13 @@
   "couleur": "pink",
   "description": "Contenu lié aux logiciels, outils numériques, vie privée et internet.",
   "cree_le": "2026-09-29"
+ },
+ {
+  "id": "crypto",
+  "nom": "Crypto",
+  "icone": "payments",
+  "couleur": "purple",
+  "description": "Cryptomonnaies, trading de tokens, blockchain et Web3.",
+  "cree_le": "2026-10-02"
  }
 ]
