@@ -1,14 +1,5 @@
 {
- "status_id": 49,
+ "status_id": 52,
  "chat": 1092851702,
- "alerts": {
-  "insta": {
-   "date": "2026-10-02",
-   "mid": 50
-  },
-  "abandon-2026-10-02": {
-   "date": "2026-10-02",
-   "mid": 51
-  }
- }
+ "alerts": {}
 }
