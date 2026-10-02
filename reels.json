@@ -313,5 +313,19 @@
   "verdict": "Super concept pour tester son offre.",
   "resume": "MiroFish est un outil open source qui simule des milliers d'agents IA aux profils variés pour tester un lancement de produit, une pub ou un prix. Il permet d'anticiper les réactions du marché avant la sortie réelle.",
   "a_retenir": "MiroFish (outil open source sur GitHub)"
+ },
+ {
+  "id": "3cc79e01bc",
+  "date": "2026-10-02",
+  "lien": "https://www.instagram.com/reel/Dd9NaJnsTZk/?stkn=MW5raWhtdXd6ang4Mg==",
+  "source": "Instagram",
+  "miniature": "thumbs/3cc79e01bc.jpg",
+  "titre": "Donner une mémoire infinie à Claude",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 4,
+  "verdict": "Super astuce pour économiser des tokens.",
+  "resume": "En reliant Claude à NotebookLM grâce à un skill dédié, Claude sauvegarde les points clés de chaque session et y accède par recherche sémantique sans saturer le contexte.",
+  "a_retenir": "Connecter Claude à NotebookLM via un skill pour mémoriser les sessions à bas coût."
  }
 ]
