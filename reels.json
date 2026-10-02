@@ -354,5 +354,19 @@
   "verdict": "",
   "resume": "Instagram demande une connexion (cookies).",
   "essais": 1
+ },
+ {
+  "id": "05a1d7bf3f",
+  "date": "2026-10-02",
+  "lien": "https://www.instagram.com/reel/DdnwMz1DLU3/?stkn=MTJzOHNxaHZxaGN6aQ==",
+  "source": "Instagram",
+  "miniature": "thumbs/05a1d7bf3f.jpg",
+  "titre": "Modèle de décision IA ultra-rapide en local",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Alternative open source super prometteuse.",
+  "resume": "Présentation d'un modèle IA open source de prise de décision ultra-rapide qui tourne en local sur Apple Silicon. Il concurrence directement le modèle JEV en étant encore plus performant.",
+  "a_retenir": "Modèle open source de décision pour Apple Silicon"
  }
 ]
