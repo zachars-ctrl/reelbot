@@ -341,5 +341,18 @@
   "verdict": "Du vent pour gratter des commentaires.",
   "resume": "Une intervenante explique comment des bots détectent et copient les créateurs de tokens sur Solana pour revendre avant les rug pulls. L'auteur s'en sert surtout pour appeler à commenter sa vidéo.",
   "a_retenir": "Sniping et copy-trading de tokens Solana"
+ },
+ {
+  "id": "69a4e67d14",
+  "date": "2026-10-02",
+  "lien": "https://www.instagram.com/p/Dc_ps8_DtZA/?img_index=5&stkn=MWNraDF2MHJ5dHUxMg==",
+  "source": "Instagram",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "a_retenir": "",
+  "verdict": "",
+  "resume": "Instagram demande une connexion (cookies).",
+  "essais": 1
  }
 ]

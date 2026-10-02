@@ -1,5 +1,10 @@
 {
  "status_id": 49,
  "chat": 1092851702,
- "alerts": {}
+ "alerts": {
+  "insta": {
+   "date": "2026-10-02",
+   "mid": 50
+  }
+ }
 }
