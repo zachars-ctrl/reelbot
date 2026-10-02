@@ -9,7 +9,8 @@
   "a_retenir": "Réécrire ses expériences avec la formule XYZ de Google via Claude",
   "id": "0f5ecb2449",
   "source": "Instagram",
-  "cat": "tuto-ia"
+  "cat": "tuto-ia",
+  "verdict": "Hyper pratique pour booster son profil."
  },
  {
   "date": "2026-09-29",
@@ -21,7 +22,8 @@
   "a_retenir": "GitHub : sosoj92/reels-vault (yt-dlp, transcription audio et indexation avec Claude)",
   "id": "e117768ac6",
   "source": "Instagram",
-  "cat": "tuto-ia"
+  "cat": "tuto-ia",
+  "verdict": "Bien vu pour centraliser ses contenus."
  },
  {
   "date": "2026-09-29",
@@ -33,19 +35,21 @@
   "a_retenir": "God's Eye View (disponible sur GitHub)",
   "id": "c7c794a3d7",
   "source": "Instagram",
-  "cat": "outil-ia"
+  "cat": "outil-ia",
+  "verdict": "Bluffant pour explorer le monde en direct."
  },
  {
   "date": "2026-09-29",
   "lien": "https://www.instagram.com/reel/DbyL3lNAbYf/?stkn=emp4cDNobmZ6NG5l",
   "titre": "Comment fonctionne la compression sans perte du PNG",
-  "categorie": "Autre",
+  "categorie": "Tech",
   "note": 4,
   "resume": "Cette vidéo vulgarise le fonctionnement de la compression PNG sans perte face au JPEG. Elle explique comment l'encodage par différences de pixels et l'arbre de Huffman permettent de réduire drastiquement la taille du fichier.",
   "a_retenir": "L'arbre de Huffman : attribuer des codes plus courts aux motifs les plus fréquents pour compresser sans perte.",
   "id": "6337d0208e",
   "source": "Instagram",
-  "cat": "autre"
+  "cat": "tech",
+  "verdict": "Captivant pour comprendre la technique."
  },
  {
   "date": "2026-09-29",
@@ -124,8 +128,8 @@
   "source": "Instagram",
   "miniature": "",
   "titre": "Schématiser son architecture de code avec Claude",
-  "cat": "outil-ia",
-  "categorie": "Outil IA",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
   "note": 4,
   "verdict": "Grave utile pour piger ton code.",
   "resume": "L'utilisation d'un outil lié à Claude Code permet d'analyser un projet de programmation complexe pour en dessiner automatiquement un schéma d'architecture clair et annoté.",
@@ -138,8 +142,8 @@
   "source": "Instagram",
   "miniature": "",
   "titre": "Optimiser ses prompts Claude avec Prompt Master",
-  "cat": "tuto-ia",
-  "categorie": "Tuto IA",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
   "note": 5,
   "verdict": "Grave utile pour économiser tes crédits.",
   "resume": "Présentation de Prompt Master, un outil gratuit disponible sur GitHub pour optimiser automatiquement ses prompts sur Claude, ChatGPT et Cursor. Il permet d'éviter les erreurs dès le départ et réduit considérablement le nombre de messages nécessaires pour obtenir le bon résultat.",
