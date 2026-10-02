@@ -264,13 +264,13 @@
   "lien": "https://www.instagram.com/reel/Dd7WGu6N4BS/?stkn=dDUyaXAwYXdwMmps",
   "source": "Instagram",
   "miniature": "thumbs/0d1e10e2a1.jpg",
-  "titre": "Pas réussi à analyser",
-  "categorie": "Échec",
-  "note": 0,
-  "a_retenir": "",
-  "verdict": "",
-  "resume": "Gemini : Server disconnected without sending a response.",
-  "essais": 1
+  "titre": "Créer son premier agent IA avec Google",
+  "categorie": "Tuto IA",
+  "note": 5,
+  "a_retenir": "Tutoriel YouTube : 'Créez votre premier agent en 8 minutes' par Google Cloud",
+  "verdict": "Carrément utile, fonce le voir.",
+  "resume": "Google a sorti un tutoriel gratuit de 8 minutes sur YouTube pour apprendre à créer un agent IA. Cerise sur le gâteau, la piste audio est traduisible en français directement dans les options.",
+  "cat": "tuto-ia"
  },
  {
   "id": "9cb6638241",
