@@ -303,5 +303,19 @@
   "verdict": "Pratique pour automatiser du contenu facilement.",
   "resume": "MoneyPrinterTurbo est un outil open source qui génère automatiquement des vidéos complètes (script, sous-titres, voix et montage) à partir d'un simple sujet.",
   "a_retenir": "MoneyPrinterTurbo"
+ },
+ {
+  "id": "142ebc3075",
+  "date": "2026-10-04",
+  "lien": "https://www.instagram.com/reel/DcYklfUurI5/?stkn=Y3Jxa3Noam9laWZm",
+  "source": "Instagram",
+  "miniature": "thumbs/142ebc3075.jpg",
+  "titre": "Outil OSINT pour numéros de téléphone",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 4,
+  "verdict": "Très pratique pour enquêter en OSINT.",
+  "resume": "SearchPhone permet d'automatiser la recherche d'informations liées à un numéro de téléphone sur plusieurs sources web et bases de données. L'outil génère directement des rapports complets en JSON et PDF.",
+  "a_retenir": "SearchPhone (github.com/HackUnderway/SearchPhone)"
  }
 ]
