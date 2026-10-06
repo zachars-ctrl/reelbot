@@ -331,5 +331,19 @@
   "verdict": "Truc de hacker super puissant.",
   "resume": "REA est un kit d'outils open-source qui permet à des agents IA de décompiler et d'analyser n'importe quelle application jusqu'au niveau binaire. Il s'intègre facilement via MCP et CLI pour recréer des fonctionnalités à partir de zéro.",
   "a_retenir": "https://github.com/morluto/rea"
+ },
+ {
+  "id": "178a114e66",
+  "date": "2026-10-06",
+  "lien": "https://www.instagram.com/reel/DYzwvprMyBs/?stkn=bms2b3UwbjBsdDc3",
+  "source": "Instagram",
+  "miniature": "thumbs/178a114e66.jpg",
+  "titre": "Recommandation du film Shot Caller",
+  "cat": "cinema",
+  "categorie": "Cinéma",
+  "note": 4,
+  "verdict": "Un thriller carcéral qui envoie.",
+  "resume": "Ce film raconte la transformation radicale d'un père de famille modèle en criminel endurci au sein d'un gang de prison pour survivre.",
+  "a_retenir": "Le film \"Shot Caller\" (2017) est disponible sur YouTube."
  }
 ]
