@@ -386,5 +386,19 @@
   "verdict": "Gros gain de temps pour les monteurs.",
   "resume": "Null Motion permet de visualiser un motion design fini en parallèle de ses roughs synchronisés, puis d'exporter le tout en un clic. L'outil automatise aussi la création de formats courts en coupant les blancs et en ajoutant des sous-titres.",
   "a_retenir": "NullMotion (github.com/bilxiv/NullMotion)"
+ },
+ {
+  "id": "c0de83f49b",
+  "date": "2026-10-07",
+  "lien": "https://www.instagram.com/reel/Db4VomDp2es/?stkn=MWd4OGZlc3lqOGlsag==",
+  "source": "Instagram",
+  "miniature": "thumbs/c0de83f49b.jpg",
+  "titre": "Dangers des IA débridées en piratage",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 4,
+  "verdict": "Assez flippant ce que ça génère.",
+  "resume": "Démonstration des capacités d'un modèle d'IA débridé capable de créer des attaques de phishing complètes avec backend et tableau de bord de suivi en temps réel.",
+  "a_retenir": "Les IA débridées facilitent la création d'exploits automatisés."
  }
 ]
