@@ -358,5 +358,19 @@
   "verdict": "",
   "resume": "téléchargement impossible : ERROR: [Instagram] DeKOJjeJBfc: Failed to parse JSON (caused by JSONDecodeError(\"Expecting value in '': line 1 column 1 (char 0)\")); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the",
   "essais": 1
+ },
+ {
+  "id": "584b59e3cd",
+  "date": "2026-10-07",
+  "lien": "https://www.instagram.com/reel/DZm_h31ohB_/?stkn=MTU3aWI4b283OGg2aw==",
+  "source": "Instagram",
+  "miniature": "thumbs/584b59e3cd.jpg",
+  "titre": "Extension pour convertir en Markdown",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Super pratique pour nourrir ton IA.",
+  "resume": "Découverte de l'extension Chrome '.MD this page' qui convertit instantanément n'importe quel site web en Markdown propre. Cela permet d'obtenir un texte structuré et sans fioritures, parfait à intégrer comme contexte dans des prompts pour ChatGPT ou Claude.",
+  "a_retenir": "Extension Chrome : .MD this page"
  }
 ]
