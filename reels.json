@@ -400,5 +400,19 @@
   "verdict": "Assez flippant ce que ça génère.",
   "resume": "Démonstration des capacités d'un modèle d'IA débridé capable de créer des attaques de phishing complètes avec backend et tableau de bord de suivi en temps réel.",
   "a_retenir": "Les IA débridées facilitent la création d'exploits automatisés."
+ },
+ {
+  "id": "bc30dea62b",
+  "date": "2026-10-07",
+  "lien": "https://www.instagram.com/reel/DeEvUwxs8yI/",
+  "source": "Instagram",
+  "miniature": "thumbs/bc30dea62b.jpg",
+  "titre": "Comment supprimer les refus d'une IA",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 5,
+  "verdict": "Vraiment instructif et bien vulgarisé.",
+  "resume": "La vidéo explique le concept d'ablitération, une technique consistant à identifier et supprimer la direction du refus dans l'espace latent d'un modèle d'IA open source.",
+  "a_retenir": "Le modèle Qwen 3.5-9B et l'outil Heretic pour le débridage d'IA."
  }
 ]
