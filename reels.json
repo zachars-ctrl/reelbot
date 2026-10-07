@@ -372,5 +372,19 @@
   "verdict": "Super pratique pour nourrir ton IA.",
   "resume": "Découverte de l'extension Chrome '.MD this page' qui convertit instantanément n'importe quel site web en Markdown propre. Cela permet d'obtenir un texte structuré et sans fioritures, parfait à intégrer comme contexte dans des prompts pour ChatGPT ou Claude.",
   "a_retenir": "Extension Chrome : .MD this page"
+ },
+ {
+  "id": "c23c9e3e4e",
+  "date": "2026-10-07",
+  "lien": "https://www.instagram.com/reel/DeEHG3cgL8h/?stkn=MWxwaDZhOWt3c2dudQ==",
+  "source": "Instagram",
+  "miniature": "thumbs/c23c9e3e4e.jpg",
+  "titre": "Présentation de l'outil Null Motion",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 4,
+  "verdict": "Gros gain de temps pour les monteurs.",
+  "resume": "Null Motion permet de visualiser un motion design fini en parallèle de ses roughs synchronisés, puis d'exporter le tout en un clic. L'outil automatise aussi la création de formats courts en coupant les blancs et en ajoutant des sous-titres.",
+  "a_retenir": "NullMotion (github.com/bilxiv/NullMotion)"
  }
 ]
