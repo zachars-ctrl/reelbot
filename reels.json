@@ -345,5 +345,18 @@
   "verdict": "Un thriller carcéral qui envoie.",
   "resume": "Ce film raconte la transformation radicale d'un père de famille modèle en criminel endurci au sein d'un gang de prison pour survivre.",
   "a_retenir": "Le film \"Shot Caller\" (2017) est disponible sur YouTube."
+ },
+ {
+  "id": "a026c9658a",
+  "date": "2026-10-07",
+  "lien": "https://www.instagram.com/reel/DeKOJjeJBfc/?stkn=MXZ0a3Zrd2QyamtxMw==",
+  "source": "Instagram",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "a_retenir": "",
+  "verdict": "",
+  "resume": "téléchargement impossible : ERROR: [Instagram] DeKOJjeJBfc: Failed to parse JSON (caused by JSONDecodeError(\"Expecting value in '': line 1 column 1 (char 0)\")); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the",
+  "essais": 1
  }
 ]
