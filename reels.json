@@ -351,13 +351,14 @@
   "date": "2026-10-07",
   "lien": "https://www.instagram.com/reel/DeKOJjeJBfc/?stkn=MXZ0a3Zrd2QyamtxMw==",
   "source": "Instagram",
-  "titre": "Pas réussi à analyser",
-  "categorie": "Échec",
-  "note": 0,
-  "a_retenir": "",
-  "verdict": "",
-  "resume": "téléchargement impossible : ERROR: [Instagram] DeKOJjeJBfc: Failed to parse JSON (caused by JSONDecodeError(\"Expecting value in '': line 1 column 1 (char 0)\")); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the",
-  "essais": 1
+  "titre": "Annuaire d'outils cybersécurité et OSINT",
+  "categorie": "Tech",
+  "note": 4,
+  "a_retenir": "start.me/p/anRBJX/follow-the-white-rabbit",
+  "verdict": "Une vraie mine d'or d'outils gratuits.",
+  "resume": "Présentation d'un tableau récapitulatif géant d'outils open-source dédiés à la cybersécurité, à l'analyse de malwares et à l'OSINT.",
+  "miniature": "thumbs/a026c9658a.jpg",
+  "cat": "tech"
  },
  {
   "id": "584b59e3cd",
