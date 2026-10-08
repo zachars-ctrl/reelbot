@@ -443,5 +443,19 @@
   "resume": "Présentation de cinq extensions et compétences pour Claude Code permettant d'obtenir des sites web plus qualitatifs et d'éviter les tics de design générés par l'IA.",
   "miniature": "thumbs/ba3cdf7054.jpg",
   "cat": "outil-ia"
+ },
+ {
+  "id": "5945845432",
+  "date": "2026-10-08",
+  "lien": "https://www.instagram.com/reel/DduRdE5Etdm/?xtok=MTU4bDVnc3pkYTZzbg==",
+  "source": "Instagram",
+  "miniature": "thumbs/5945845432.jpg",
+  "titre": "Accélérer Claude Code avec agy-staff",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Super malin pour coder plus vite.",
+  "resume": "agy-staff est un plugin open-source pour Claude Code et Codex qui délègue les tâches secondaires à Gemini Flash en arrière-plan. Cela permet de continuer à développer sans attendre les revues ou recherches du modèle principal.",
+  "a_retenir": "agy-staff (repo GitHub : keli-wen/agy-staff)"
  }
 ]
