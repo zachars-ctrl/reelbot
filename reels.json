@@ -421,13 +421,14 @@
   "date": "2026-10-07",
   "lien": "https://www.instagram.com/reel/DeHGjlZPIHF/",
   "source": "Instagram",
-  "titre": "En attente",
-  "categorie": "Échec",
-  "note": 0,
-  "a_retenir": "",
-  "verdict": "",
-  "essais": 0,
-  "resume": "Pas eu le temps, repris au prochain tri."
+  "titre": "Exemples d'animations de dashboard web",
+  "categorie": "Tech",
+  "note": 4,
+  "a_retenir": "Le design en grille Bento avec des micro-animations de transition.",
+  "verdict": "Propre, ça donne de l'inspi.",
+  "resume": "Une démonstration d'animations fluides et d'interactions UX pour un tableau de bord au style Bento. Idéal pour s'inspirer en matière de design d'interface et de transitions web.",
+  "miniature": "thumbs/37ca2a4296.jpg",
+  "cat": "tech"
  },
  {
   "id": "ba3cdf7054",
