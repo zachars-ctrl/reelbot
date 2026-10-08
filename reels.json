@@ -435,12 +435,13 @@
   "date": "2026-10-07",
   "lien": "https://www.instagram.com/reel/DeJghbktn0j/",
   "source": "Instagram",
-  "titre": "En attente",
-  "categorie": "Échec",
-  "note": 0,
-  "a_retenir": "",
-  "verdict": "",
-  "essais": 0,
-  "resume": "Pas eu le temps, repris au prochain tri."
+  "titre": "5 outils pour coder avec Claude Code",
+  "categorie": "Outil IA",
+  "note": 4,
+  "a_retenir": "Les extensions Claude Code : /design, Awesome Design, Taste Skill, Web Design Guidelines et Claude in Chrome.",
+  "verdict": "Indispensable pour éviter le style IA générique.",
+  "resume": "Présentation de cinq extensions et compétences pour Claude Code permettant d'obtenir des sites web plus qualitatifs et d'éviter les tics de design générés par l'IA.",
+  "miniature": "thumbs/ba3cdf7054.jpg",
+  "cat": "outil-ia"
  }
 ]
