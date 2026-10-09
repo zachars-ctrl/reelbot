@@ -470,5 +470,19 @@
   "verdict": "",
   "resume": "téléchargement impossible : ERROR: [Instagram] DeHgSEgn_40: Failed to parse JSON (caused by JSONDecodeError(\"Expecting value in '': line 1 column 1 (char 0)\")); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the",
   "essais": 1
+ },
+ {
+  "id": "688c950e08",
+  "date": "2026-10-09",
+  "lien": "https://www.instagram.com/reel/DcjSSeHMcGT/?mdxt=NG54d25lazBhd2Jn",
+  "source": "Instagram",
+  "miniature": "thumbs/688c950e08.jpg",
+  "titre": "Recommandation du film Prisoners",
+  "cat": "cinema",
+  "categorie": "Cinéma",
+  "note": 5,
+  "verdict": "Un classique sombre à voir absolument.",
+  "resume": "Présentation et recommandation du thriller policier 'Prisoners' réalisé par Denis Villeneuve. Idéal si tu aimes les ambiances automnales, pluvieuses et les enquêtes sous haute tension.",
+  "a_retenir": "Le film Prisoners (2013) de Denis Villeneuve"
  }
 ]
