@@ -498,5 +498,19 @@
   "verdict": "Super intéressant, tu ne regarderas plus jamais ça.",
   "resume": "La vidéo explique pourquoi un objet aussi banal qu'une palette est un pilier stratégique et ultra-rentable de l'économie mondiale. Elle souligne également le contrôle strict et les enjeux de fraude entourant ce secteur.",
   "a_retenir": "La palette en bois est un indicateur économique surveillé et un business très lucratif."
+ },
+ {
+  "id": "da33473311",
+  "date": "2026-10-09",
+  "lien": "https://www.instagram.com/reel/DeR1xbqtI0O/?psln=MXR3anVtaHN3Yjk2eg==",
+  "source": "Instagram",
+  "miniature": "thumbs/da33473311.jpg",
+  "titre": "Transformer un site web en PWA",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 4,
+  "verdict": "Super conseil pour éviter les stores.",
+  "resume": "Les PWA permettent d'installer un site comme une application mobile gratuitement et sans validation d'Apple ou Google. C'est idéal pour lancer un premier projet sans payer d'abonnement développeur.",
+  "a_retenir": "Passer par une PWA (manifest, service worker) plutôt qu'une app native complexe."
  }
 ]
