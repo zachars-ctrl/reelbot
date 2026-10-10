@@ -512,5 +512,18 @@
   "verdict": "Super conseil pour éviter les stores.",
   "resume": "Les PWA permettent d'installer un site comme une application mobile gratuitement et sans validation d'Apple ou Google. C'est idéal pour lancer un premier projet sans payer d'abonnement développeur.",
   "a_retenir": "Passer par une PWA (manifest, service worker) plutôt qu'une app native complexe."
+ },
+ {
+  "id": "222e230433",
+  "date": "2026-10-10",
+  "lien": "https://www.instagram.com/p/DdobraEDKK5/?img_index=2&xtok=bjl1c2ptbDJiZDZt",
+  "source": "Instagram",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "a_retenir": "",
+  "verdict": "",
+  "resume": "Instagram demande une connexion (cookies).",
+  "essais": 1
  }
 ]
