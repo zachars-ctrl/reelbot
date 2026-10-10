@@ -566,5 +566,19 @@
   "verdict": "",
   "resume": "Instagram demande une connexion (cookies).",
   "essais": 1
+ },
+ {
+  "id": "9d9250b5f4",
+  "date": "2026-10-10",
+  "lien": "https://www.instagram.com/reel/DeJg4SpR-_G/?exln=cXdubGlxNWxicHQ2",
+  "source": "Instagram",
+  "miniature": "thumbs/9d9250b5f4.jpg",
+  "titre": "4 plugins essentiels pour Claude Code",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 5,
+  "verdict": "Très lourd pour optimiser Claude Code.",
+  "resume": "Présentation de quatre plugins indispensables pour Claude Code (Ponytail, OmniRoute, Graphify et Agent Skills). Ils permettent de réduire drastiquement la consommation de tokens et de mieux structurer le développement.",
+  "a_retenir": "Ponytail, OmniRoute, Graphify et Agent Skills"
  }
 ]
