@@ -539,5 +539,19 @@
   "verdict": "Teaser frustrant pour aller sur YouTube.",
   "resume": "Enquête sur la plateforme allemande Flyla qui promet jusqu'à -70% sur les vols pour étudiants. L'auteur montre que les rabais réels sont souvent minimes avant de renvoyer vers sa vidéo longue.",
   "a_retenir": "Flyla (site allemand de réductions vols étudiants)"
+ },
+ {
+  "id": "e6caa3b446",
+  "date": "2026-10-10",
+  "lien": "https://www.instagram.com/reel/DdmBwdFKVe_/?dlrf=MTl2eHNzczZyYzNpag==",
+  "source": "Instagram",
+  "miniature": "thumbs/e6caa3b446.jpg",
+  "titre": "Booster Claude Code avec Everything Claude Code",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 5,
+  "verdict": "Indispensable si tu développes avec Claude.",
+  "resume": "Ce repo GitHub (ECC) transforme Claude Code en une véritable équipe de dev complète grâce à plus de 64 agents spécialisés et 261 skills. Il s'installe facilement via une commande npx pour automatiser les tâches de code.",
+  "a_retenir": "Everything Claude Code (ECC) sur GitHub"
  }
 ]
