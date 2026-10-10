@@ -580,5 +580,19 @@
   "verdict": "Très lourd pour optimiser Claude Code.",
   "resume": "Présentation de quatre plugins indispensables pour Claude Code (Ponytail, OmniRoute, Graphify et Agent Skills). Ils permettent de réduire drastiquement la consommation de tokens et de mieux structurer le développement.",
   "a_retenir": "Ponytail, OmniRoute, Graphify et Agent Skills"
+ },
+ {
+  "id": "fa810ac4f6",
+  "date": "2026-10-10",
+  "lien": "https://www.instagram.com/reel/DeQ_R3CBBWG/?exln=MWViYmNjMzRlZWhrNw==",
+  "source": "Instagram",
+  "miniature": "thumbs/fa810ac4f6.jpg",
+  "titre": "Les bases du référencement naturel SEO",
+  "cat": "tech",
+  "categorie": "Tech",
+  "note": 3,
+  "verdict": "Bon rappel des bases du SEO.",
+  "resume": "Explication des trois piliers du référencement naturel (technique, contenu et popularité) pour positionner son site en première page de Google sans payer de publicité.",
+  "a_retenir": "Les 3 piliers du SEO : technique optimisée, contenu ciblé et liens externes."
  }
 ]
