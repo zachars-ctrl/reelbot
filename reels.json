@@ -594,5 +594,19 @@
   "verdict": "Bon rappel des bases du SEO.",
   "resume": "Explication des trois piliers du référencement naturel (technique, contenu et popularité) pour positionner son site en première page de Google sans payer de publicité.",
   "a_retenir": "Les 3 piliers du SEO : technique optimisée, contenu ciblé et liens externes."
+ },
+ {
+  "id": "8a6a95092e",
+  "date": "2026-10-10",
+  "lien": "https://www.instagram.com/reel/DePeM6Mxobz/?dlrf=MTQ1ZnprZmtkMnR6Mg==",
+  "source": "Instagram",
+  "miniature": "thumbs/8a6a95092e.jpg",
+  "titre": "VibeWise pour cadrer Claude Code",
+  "cat": "outil-ia",
+  "categorie": "Outil IA",
+  "note": 4,
+  "verdict": "Indispensable pour éviter de coder n'importe quoi.",
+  "resume": "VibeWise est un plugin pour Claude Code qui refuse de coder tant que tu n'as pas clarifié la logique métier et les cas particuliers.",
+  "a_retenir": "Plugin VibeWise pour Claude Code"
  }
 ]
