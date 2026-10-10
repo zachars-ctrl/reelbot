@@ -36,5 +36,13 @@
   "couleur": "purple",
   "description": "Cryptomonnaies, trading de tokens, blockchain et Web3.",
   "cree_le": "2026-10-02"
+ },
+ {
+  "id": "voyage",
+  "nom": "Voyage",
+  "icone": "flight",
+  "couleur": "teal",
+  "description": "Voyages, billets d'avion, hébergements et astuces pour voyager moins cher.",
+  "cree_le": "2026-10-10"
  }
 ]
