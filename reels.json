@@ -553,5 +553,18 @@
   "verdict": "Indispensable si tu développes avec Claude.",
   "resume": "Ce repo GitHub (ECC) transforme Claude Code en une véritable équipe de dev complète grâce à plus de 64 agents spécialisés et 261 skills. Il s'installe facilement via une commande npx pour automatiser les tâches de code.",
   "a_retenir": "Everything Claude Code (ECC) sur GitHub"
+ },
+ {
+  "id": "b91f19a0da",
+  "date": "2026-10-10",
+  "lien": "https://www.instagram.com/p/DeCAlxLjSFl/?img_index=4&rpxt=MXVxNG14ajB0czZ1bA==",
+  "source": "Instagram",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "a_retenir": "",
+  "verdict": "",
+  "resume": "Instagram demande une connexion (cookies).",
+  "essais": 1
  }
 ]
