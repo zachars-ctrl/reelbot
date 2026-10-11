@@ -608,5 +608,18 @@
   "verdict": "Indispensable pour éviter de coder n'importe quoi.",
   "resume": "VibeWise est un plugin pour Claude Code qui refuse de coder tant que tu n'as pas clarifié la logique métier et les cas particuliers.",
   "a_retenir": "Plugin VibeWise pour Claude Code"
+ },
+ {
+  "id": "fd477568e9",
+  "date": "2026-10-11",
+  "lien": "https://www.instagram.com/p/DdeLN4ujZGN/?img_index=9&obrf=MW1oZTA0bHFkOXd0bA==",
+  "source": "Instagram",
+  "titre": "Pas réussi à analyser",
+  "categorie": "Échec",
+  "note": 0,
+  "a_retenir": "",
+  "verdict": "",
+  "resume": "Instagram demande une connexion (cookies).",
+  "essais": 1
  }
 ]
