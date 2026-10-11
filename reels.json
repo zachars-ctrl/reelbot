@@ -621,5 +621,19 @@
   "verdict": "",
   "resume": "Instagram demande une connexion (cookies).",
   "essais": 1
+ },
+ {
+  "id": "a635b1c3a4",
+  "date": "2026-10-11",
+  "lien": "https://www.instagram.com/reel/DeRGoFDxyRD/?exln=MXBldG56ZndubWs5ZA==",
+  "source": "Instagram",
+  "miniature": "thumbs/a635b1c3a4.jpg",
+  "titre": "3 mots-clés pour optimiser Claude",
+  "cat": "tuto-ia",
+  "categorie": "Tuto IA",
+  "note": 4,
+  "verdict": "Astuces sympas pour booster tes prompts.",
+  "resume": "La vidéo présente trois commandes (L99, OODA et Artifacts) à insérer dans vos prompts Claude pour obtenir un ton expert, une méthode militaire de résolution de problème ou générer des mini-apps.",
+  "a_retenir": "Mots-clés L99, OODA et Artifacts dans Claude"
  }
 ]
